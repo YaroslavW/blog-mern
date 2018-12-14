@@ -1,5 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
 
 const posts = [
     {
@@ -24,4 +27,14 @@ app.get('/posts', function(req, res) {
     return res.send(posts);
 });
 
+app.get('/posts/:id', function(req, res) {
+    const id = req.params.id;
+    res.send(posts[id]);
+})
+app.post('/posts', function(req, res) {
+    const data = req.body;
+    console.log(data);
+    posts.push(data);
+    return res.send(posts);
+})
 app.listen(3000, ()=> console.log('Server running on 3000 port'));
