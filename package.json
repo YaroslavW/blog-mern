@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/YaroslavW/blog-mern/issues"
   },
-  "homepage": "https://github.com/YaroslavW/blog-mern#readme"
+  "homepage": "https://github.com/YaroslavW/blog-mern#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
