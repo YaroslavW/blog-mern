@@ -1,0 +1,26 @@
+{
+  "name": "blog-mern",
+  "version": "1.0.0",
+  "description": "Blog with MongoDB, ExpressJS, ReactJS, NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaroslavW/blog-mern.git"
+  },
+  "keywords": [
+    "MERN",
+    "mongodb",
+    "express",
+    "react",
+    "node"
+  ],
+  "author": "Yaroslav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaroslavW/blog-mern/issues"
+  },
+  "homepage": "https://github.com/YaroslavW/blog-mern#readme"
+}
