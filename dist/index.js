@@ -1,10 +1,19 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test1');
+"use strict";
 
-const Cat = mongoose.model('Cat', { name: String });
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/test1');
 
-const kitty = new Cat({ name: 'Zildjian' });
-kitty.save().then(() => console.log('meow'));
+// const Cat = mongoose.model('Cat', { name: String });
+
+// const kitty = new Cat({ name: 'Zildjian' });
+// kitty.save().then(() => console.log('meow'));
+
+var arr = [1, 2, 3, 4, 5, 6];
+var result = arr.map(function (value) {
+  return value * 2;
+});
+console.log(result);
+
 // const express = require('express');
 // const bodyParser = require('body-parser');
 // const app = express();
