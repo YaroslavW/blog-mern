@@ -31,6 +31,18 @@ app.get('/posts', (req, res) => {
         res.json(posts);
     });
 });
+
+app.delete('/posts/:id', (req, res) => {
+    PostModel.remove({
+        _id: req.params.id
+    }).then(post => {
+        if(post) {
+            res.json({ status: "deleted"});
+        } else {
+            res.json({ status: "error"});
+        }
+    })
+})
 app.listen(3000, () => console.log("Server running on 3000 port"))
 
 
