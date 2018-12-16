@@ -41,8 +41,18 @@ app.delete('/posts/:id', (req, res) => {
         } else {
             res.json({ status: "error"});
         }
-    })
-})
+    });
+});
+
+app.put('/posts/:id', (req, res) => {
+    PostModel.findByIdAndUpdate(req.params.id, {$set: req.body}, (err) => {
+        if(err) {
+            res.send(err);
+        }
+        res.json({ status: "update"});
+    });
+});
+
 app.listen(3000, () => console.log("Server running on 3000 port"))
 
 
