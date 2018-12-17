@@ -1,8 +1,8 @@
 import PostModel from '../models/Post';
-import Post from '../models/Post';
+
 class PostController {
     index(req, res) {
-        Post.find().then((err, posts) => {
+        PostModel.find().then((err, posts) => {
             if(err){
                 res.send(err);
             }

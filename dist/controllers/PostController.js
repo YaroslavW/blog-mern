@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Post = require('../models/Post');
+var _Post = require("../models/Post");
 
 var _Post2 = _interopRequireDefault(_Post);
 
@@ -14,13 +14,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// import Post from '../models/Post';
 var PostController = function () {
     function PostController() {
         _classCallCheck(this, PostController);
     }
 
     _createClass(PostController, [{
-        key: 'index',
+        key: "index",
         value: function index(req, res) {
             _Post2.default.find().then(function (err, posts) {
                 if (err) {
@@ -30,7 +31,7 @@ var PostController = function () {
             });
         }
     }, {
-        key: 'create',
+        key: "create",
         value: function create(req, res) {
             var data = req.body;
             // console.log(req.body);
@@ -44,7 +45,7 @@ var PostController = function () {
             });
         }
     }, {
-        key: 'read',
+        key: "read",
         value: function read(req, res) {
             _Post2.default.findOne({ _id: req.params.id }).then(function (post) {
                 if (!post) {
@@ -55,7 +56,7 @@ var PostController = function () {
             });
         }
     }, {
-        key: 'update',
+        key: "update",
         value: function update(req, res) {
             _Post2.default.findByIdAndUpdate(req.params.id, { $set: req.body }, function (err) {
                 if (err) {
@@ -65,7 +66,7 @@ var PostController = function () {
             });
         }
     }, {
-        key: 'delete',
+        key: "delete",
         value: function _delete(req, res) {
             _Post2.default.remove({
                 _id: req.params.id
